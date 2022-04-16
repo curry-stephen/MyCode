@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yy.dao.GuestsMapper">
+    
+  <insert id="addGuests" parameterType="Guests">
+      insert into guests(name, sex, card, phone, enterTime, exitTime, h_type, num) values 
+      (#{name},#{sex},#{card},#{phone},#{enterTime},#{exitTime},#{h_type},#{num});
+  </insert>
+    
+    <delete id="deleteGuestsById" parameterType="int">
+        delete from  guests
+        where id=#{id};
+    </delete>
+<update id="updateGuestsById" parameterType="Guests">
+    update guests set name=#{name},sex=#{sex},card=#{card},phone=#{phone},
+    enterTime=#{enterTime},exitTime=#{exitTime},num=#{num},h_type=#{h_type}
+    where id=#{id};
+</update>
+    <select id="queryAllGuests" resultType="Guests">
+        select * from guests;
+    </select>
+    <select id="queryGuestsById" resultType="Guests">
+        select * from guests
+        where id=#{id};
+    </select>
+    <select id="queryGuestsByPhone" resultType="Guests">
+        select * from guests
+        where phone=#{phone};
+    </select>
+</mapper>

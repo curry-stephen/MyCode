@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yy.dao.VipMapper">
+    
+ <insert id="addVip" parameterType="Vip">
+     insert into vip(name, sex, card, phone, v_type, startTime, endTime) VALUES 
+     (name=#{name},sex=#{sex},card=#{card},phone=#{phone},v_type=#{v_type},startTime=#{startTime},endTime=#{endTime});
+ </insert>
+    
+    <delete id="deleteVipById" parameterType="int">
+        delete from vip where id=#{id};
+    </delete>
+    
+    <update id="updateVipById" parameterType="Vip">
+        update vip set name=#{name},sex=#{sex},card=#{card},phone=#{phone},v_type=#{v_type},startTime=#{startTime},endTime=#{endTime}
+        where id=#{id};
+    </update>
+    <select id="queryVipById" resultType="Vip">
+        select * from vip  where id=#{id};
+    </select>
+    <select id="queryAllVip" resultType="Vip">
+        select * from vip;
+    </select>
+    
+    <select id="queryVipByPhone" resultType="Vip">
+        select * from vip  where phone=#{phone};
+    </select>
+
+</mapper>
