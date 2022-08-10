@@ -1,0 +1,10 @@
+# 服务端口
+server:
+  port: 808
+# 配置rabbitmq服务
+spring:
+  rabbitmq:
+   username: admin1
+   password: 123
+   virtual-host: /
+   addresses: 43.142.85.155:5673, 43.142.85.155:5674,43.142.85.155:5675,
