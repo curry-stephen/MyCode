@@ -4,11 +4,11 @@ server:
 # 配置rabbitmq服务
 spring:
   rabbitmq:
-   username: admin1
-   password: 123
+   username: 用户名
+   password: 密码
    virtual-host: /
    connection-timeout: 16000
-   addresses: 43.142.85.155:5673, 43.142.85.155:5674,43.142.85.155:5675,
+   addresses: ip地址1:端口1, ip地址2:端口2,ip地址3:端口3,
   # 启用消息确认模式
    publisher-confirm-type: correlated
 
