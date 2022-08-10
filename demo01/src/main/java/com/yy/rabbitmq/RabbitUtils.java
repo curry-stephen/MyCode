@@ -15,7 +15,7 @@ import java.util.concurrent.TimeoutException;
 public class RabbitUtils {
     public static Channel getChannel() throws Exception {
         ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost("43.142.85.155");
+        connectionFactory.setHost("ip地址");
         connectionFactory.setPort(5672);
         connectionFactory.setVirtualHost("/");
         connectionFactory.setUsername("guest");
