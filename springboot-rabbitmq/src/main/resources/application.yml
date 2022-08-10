@@ -1,9 +1,9 @@
 spring:
   rabbitmq:
-    host: 43.142.85.155
-    username: guest
-    password: guest
-    port: 5672
+    host: ip地址
+    username: 用户名
+    password: 密码
+    port: 端口号
     #none 禁用发布确认模式；correlated 发布消息成功交到交换机后触发回调方法 ；simple单个发布确认模式
     publisher-confirm-type: correlated #配置发布确认模式
     #回退消息，交换机可以但队列出现问题后将消息返回
